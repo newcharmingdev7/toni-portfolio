@@ -114,8 +114,8 @@ const HeadComponent = () => {
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta property="og:image" content="/assets/img/profile-img.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="630" />
+        <meta property="og:image:height" content="1200" />
         <meta property="twitter:image" content="/assets/img/profile-img.jpg" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
