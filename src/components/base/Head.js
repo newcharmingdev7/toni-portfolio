@@ -98,7 +98,7 @@ const HeadComponent = () => {
         event.preventDefault();
       }
     };
-    
+
     document.addEventListener("keydown", disableDevTools);
 
     return () => {
@@ -113,11 +113,22 @@ const HeadComponent = () => {
       <Head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta property="og:image" content="assets/img/profile-img.jpg" />
+        <meta property="og:image" content="/assets/img/profile-img.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="twitter:image" content="assets/img/profile-img.jpg" />
+        <meta property="twitter:image" content="/assets/img/profile-img.jpg" />
         <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="instagram:image"
+          content="/assets/img/profile-img.jpg"
+        />
+        <meta property="telegram:image" content="/assets/img/profile-img.jpg" />
+        <meta
+          property="pinterest:image"
+          content="/assets/img/profile-img.jpg"
+        />
+        <meta property="linkedin:image" content="/assets/img/profile-img.jpg" />
+        <meta property="facebook:image" content="/assets/img/profile-img.jpg" />
         <title>Index - Toni Stuckey Portfolio</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
