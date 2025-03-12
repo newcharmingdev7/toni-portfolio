@@ -81,8 +81,30 @@ const HeadComponent = () => {
       stars.geometry.attributes.position.needsUpdate = true;
     });
 
+    const disableRightClick = (event) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", disableRightClick);
+
+    const disableDevTools = (event) => {
+      if (
+        event.keyCode === 123 || // F12
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+        (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+        (event.ctrlKey && event.keyCode === 85)
+      ) {
+        // Ctrl+U
+        event.preventDefault();
+      }
+    };
+    
+    document.addEventListener("keydown", disableDevTools);
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.removeEventListener("contextmenu", disableRightClick);
+      document.removeEventListener("keydown", disableDevTools);
     };
   }, []);
 
@@ -92,7 +114,10 @@ const HeadComponent = () => {
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta property="og:image" content="assets/img/profile-img.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="twitter:image" content="assets/img/profile-img.jpg" />
+        <meta property="twitter:card" content="summary_large_image" />
         <title>Index - Toni Stuckey Portfolio</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
