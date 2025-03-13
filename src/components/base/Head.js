@@ -129,7 +129,7 @@ const HeadComponent = () => {
         />
         <meta property="linkedin:image" content="/assets/img/profile-img.jpg" />
         <meta property="facebook:image" content="/assets/img/profile-img.jpg" />
-        <title>Index - Toni Stuckey Portfolio</title>
+        <title>Toni Stuckey </title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
       </Head>
