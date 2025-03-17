@@ -47,7 +47,7 @@ const Contact = () => {
     <>
       {state.succeeded ? (
         <>
-          <p className="text-center">Thanks for your submission!</p>
+          <p className="text-center">Thanks for your message!</p>
           <div
             id="fireworks-container"
             style={{ position: "relative", width: "100%", height: "100vh" }}
