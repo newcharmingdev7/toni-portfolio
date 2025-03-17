@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "fireworks-js": "^2.10.8",
     "glightbox": "^3.3.1",
     "next": "15.2.1",
     "nodemailer": "^6.10.0",

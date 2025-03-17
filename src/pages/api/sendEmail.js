@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import fetch from "node-fetch";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -12,24 +12,34 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: '',
-        pass: '',
+    const formspreeEndpoint = "https://formspree.io/f/mdkeklne";
+
+    const response = await fetch(formspreeEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        subject,
+      }),
     });
 
-    const mailOptions = {
-      from: email,
-      to: "letdreamgo77@gmail.com",
-      subject: subject,
-      text: `From: ${name} (${email})\n\n${message}`,
-      replyTo: email,
-    };
-
-    await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: "Email sent successfully" });
+    if (response.ok) {
+      res
+        .status(200)
+        .json({ success: true, message: "Email sent successfully" });
+    } else {
+      const errorData = await response.json();
+      res
+        .status(response.status)
+        .json({
+          success: false,
+          error: errorData.error || "Failed to send email",
+        });
+    }
   } catch (error) {
     console.error("Email sending error:", error);
     res.status(500).json({ success: false, error: "Internal Server Error" });

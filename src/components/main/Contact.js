@@ -1,5 +1,6 @@
-import { useState } from "react";
-import toast from "react-hot-toast";
+import React, { useState, useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { Fireworks } from "fireworks-js";
 
 const defaultForm = {
   name: "",
@@ -10,121 +11,129 @@ const defaultForm = {
 
 const Contact = () => {
   const [contactForm, setContactForm] = useState(defaultForm);
-  const [isLoading, setIsLoading] = useState(false);
+  const [state, handleSubmit] = useForm("mdkeklne");
 
-  const handleSubmit = async () => {
-    if (!contactForm.name && !contactForm.email && !contactForm.message) {
-      toast.error("Please fill all the fields");
-      return;
-    }
-
-    if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactForm.email)
-    ) {
-      toast.error("Please enter a valid email");
-      return;
-    }
-
-    try {
-      setIsLoading(true);
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ contactForm }),
-      });
-
-      if (response.ok) {
-        toast.success("Email sent successfully");
-      } else {
-        toast.error("Failed to send email. Please try again.");
-      }
-      setIsLoading(false);
-      setContactForm(defaultForm);
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("Failed to send email. Please try again.");
-      setIsLoading(false);
-      setContactForm(defaultForm);
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
   };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      const container = document.getElementById("fireworks-container");
+      const fireworks = new Fireworks(container, {
+        sound: {
+          enabled: true,
+          files: ["/sounds/explosion.mp3"],
+          volume: {
+            min: 4,
+            max: 8,
+          },
+        },
+      });
+      fireworks.start();
+
+      // Stop fireworks after 5 seconds
+      setTimeout(() => {
+        fireworks.stop();
+      }, 10000);
+    }
+  }, [state.succeeded]);
 
   return (
     <>
-      <div className="container section-title">
-        <div>
-          <p className="text-center">Get in touch</p>
-        </div>
-        <p className="text-center">Would love to hear from you</p>
-      </div>
-      <section id="contact" className="contact section">
-        <div className="container">
-          <div className="php-email-form form">
-            <div className="row gy-4">
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  placeholder="Your Name"
-                  value={contactForm.name}
-                  onChange={(e) =>
-                    setContactForm({ ...contactForm, name: e.target.value })
-                  }
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  placeholder="Your Email"
-                  value={contactForm.email}
-                  onChange={(e) =>
-                    setContactForm({ ...contactForm, email: e.target.value })
-                  }
-                />
-              </div>
-              <div className="col-md-12">
-                <input
-                  type="text"
-                  className="form-control"
-                  name="subject"
-                  placeholder="Subject"
-                  value={contactForm.subject}
-                  onChange={(e) =>
-                    setContactForm({ ...contactForm, subject: e.target.value })
-                  }
-                />
-              </div>
-              <div className="col-md-12">
-                <textarea
-                  className="form-control"
-                  name="message"
-                  rows="6"
-                  placeholder="Message"
-                  value={contactForm.message}
-                  onChange={(e) =>
-                    setContactForm({ ...contactForm, message: e.target.value })
-                  }
-                ></textarea>
-              </div>
-              <div className="col-md-12 text-center">
-                {isLoading ? (
-                  <button type="submit" onClick={handleSubmit} className="animate-bounce">
-                    Sending...
-                  </button>
-                ) : (
-                  <button type="submit" onClick={handleSubmit}>
-                    Send Message
-                  </button>
-                )}
+      {state.succeeded ? (
+        <>
+          <p className="text-center">Thanks for your submission!</p>
+          <div
+            id="fireworks-container"
+            style={{ position: "relative", width: "100%", height: "100vh" }}
+          ></div>
+        </>
+      ) : (
+        <>
+          <div className="container section-title">
+            <p className="text-center">Get in touch</p>
+            <p className="text-center">Would love to hear from you</p>
+          </div>
+          <section id="contact" className="contact section">
+            <div className="container">
+              <div className="php-email-form form">
+                <form onSubmit={handleSubmit} className="row gy-4">
+                  <div className="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      placeholder="Your Name"
+                      value={contactForm.name}
+                      onChange={handleChange}
+                    />
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control"
+                      placeholder="Your Email"
+                      value={contactForm.email}
+                      onChange={handleChange}
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <input
+                      type="text"
+                      name="subject"
+                      className="form-control"
+                      placeholder="Subject"
+                      value={contactForm.subject}
+                      onChange={handleChange}
+                    />
+                    <ValidationError
+                      prefix="Subject"
+                      field="subject"
+                      errors={state.errors}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <textarea
+                      name="message"
+                      className="form-control"
+                      rows="6"
+                      placeholder="Message"
+                      value={contactForm.message}
+                      onChange={handleChange}
+                    ></textarea>
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
+                  </div>
+                  <div className="col-md-12 text-center">
+                    <button type="submit" disabled={state.submitting}>
+                      {state.submitting ? "Sending..." : "Send Message"}
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </>
+      )}
     </>
   );
 };
