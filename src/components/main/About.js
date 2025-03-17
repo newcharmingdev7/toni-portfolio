@@ -27,7 +27,7 @@ const About = () => {
               <div>
                 <h2>Software Developer</h2>
                 <p className="py-3 text-[18px]">
-                  an experienced and reliable software developer with over a
+                  An experienced and reliable software developer with over a
                   decade of expertise in web, mobile, AI, Web3, and DevOps.
                   Known for delivering high-quality, scalable solutions through
                   innovative approaches and a broad technical vision. Always

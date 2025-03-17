@@ -18,14 +18,14 @@ const Experience = () => {
               <p className="text-[18px]">2022 - Present</p>
             </div>
             <ul>
-              <li>Led the development of an AI-powered social platform</li>
-              <li>Mentored junior developers</li>
+              <li>- Led the development of an AI-powered social platform</li>
+              <li>- Mentored junior developers</li>
               <li>
-                Actively participated in technical communities and collaborated
-                with another peers
+                - Actively participated in technical communities and
+                collaborated with another peers
               </li>
               <li>
-                Participated in interview with clients and stakeholders to
+                - Participated in interview with clients and stakeholders to
                 expand my business insights.
               </li>
             </ul>
@@ -40,12 +40,12 @@ const Experience = () => {
             </div>
             <ul>
               <li>
-                Built and maintained backend solution of Workforce Management
+                - Built and maintained backend solution of Workforce Management
                 Platform{" "}
               </li>
-              <li>Designed APIs and documented them </li>
+              <li>- Designed APIs and documented them </li>
               <li>
-                Refactored a legacy Node.js backend to Nest.js to improve
+                - Refactored a legacy Node.js backend to Nest.js to improve
                 project performance.
               </li>
             </ul>
@@ -59,9 +59,9 @@ const Experience = () => {
               <p className="text-[18px]">2015 - 2018</p>
             </div>
             <ul>
-              <li>Developed a serverless SaaS platform </li>
+              <li>- Developed a serverless SaaS platform </li>
               <li>
-                Developed e-commerce platform for dress shop with Shopify{" "}
+                - Developed e-commerce platform for dress shop with Shopify
               </li>
             </ul>
           </div>
