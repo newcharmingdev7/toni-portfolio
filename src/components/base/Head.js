@@ -81,25 +81,25 @@ const HeadComponent = () => {
       stars.geometry.attributes.position.needsUpdate = true;
     });
 
-    // const disableRightClick = (event) => {
-    //   event.preventDefault();
-    // };
+    const disableRightClick = (event) => {
+      event.preventDefault();
+    };
 
-    // document.addEventListener("contextmenu", disableRightClick);
+    document.addEventListener("contextmenu", disableRightClick);
 
-    // const disableDevTools = (event) => {
-    //   if (
-    //     event.keyCode === 123 || // F12
-    //     (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
-    //     (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
-    //     (event.ctrlKey && event.keyCode === 85)
-    //   ) {
-    //     // Ctrl+U
-    //     event.preventDefault();
-    //   }
-    // };
+    const disableDevTools = (event) => {
+      if (
+        event.keyCode === 123 || // F12
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+        (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+        (event.ctrlKey && event.keyCode === 85)
+      ) {
+        // Ctrl+U
+        event.preventDefault();
+      }
+    };
 
-    // document.addEventListener("keydown", disableDevTools);
+    document.addEventListener("keydown", disableDevTools);
 
     return () => {
       window.removeEventListener("resize", handleResize);
