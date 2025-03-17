@@ -56,7 +56,9 @@ const Contact = () => {
       ) : (
         <>
           <div className="container section-title">
-            <p className="text-center">Get in touch</p>
+            <div>
+              <p className="text-center">Get in touch</p>
+            </div>
             <p className="text-center">Would love to hear from you</p>
           </div>
           <section id="contact" className="contact section">
