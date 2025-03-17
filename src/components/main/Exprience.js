@@ -5,9 +5,9 @@ const Experience = () => {
         <div>
           <p className="text-center">Professional Experience</p>
         </div>
-        <p className="text-center">Explore my career journey</p>
+        <p className="text-center text-[18px]">Explore my career journey</p>
       </div>
-      <section id="experience" className="resume section">
+      <section id="experience" className="resume section text-[18px]">
         <div className="container">
           <div className="resume-item">
             <h4>Software Developer and Team Lead</h4>
@@ -15,7 +15,7 @@ const Experience = () => {
               <p>
                 <em>R/GA, Remote</em>
               </p>
-              <h5>2022 - Present</h5>
+              <p className="text-[18px]">2022 - Present</p>
             </div>
             <ul>
               <li>Led the development of an AI-powered social platform</li>
@@ -36,7 +36,7 @@ const Experience = () => {
               <p>
                 <em>Specbee, Atlanta, GA</em>
               </p>
-              <h5>2018 - 2022</h5>
+              <p className="text-[18px]">2018 - 2022</p>
             </div>
             <ul>
               <li>
@@ -56,11 +56,13 @@ const Experience = () => {
               <p>
                 <em>VEH Enterprises Inc, Atlanta, GA</em>
               </p>
-              <h5>2015 - 2018</h5>
+              <p className="text-[18px]">2015 - 2018</p>
             </div>
             <ul>
               <li>Developed a serverless SaaS platform </li>
-              <li>Developed e-commerce platform for dress shop with Shopify </li>
+              <li>
+                Developed e-commerce platform for dress shop with Shopify{" "}
+              </li>
             </ul>
           </div>
         </div>

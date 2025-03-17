@@ -5,7 +5,7 @@ const Service = () => {
         <div>
           <p className="text-center">What I offer</p>
         </div>
-        <p className="text-center">Services I provide</p>
+        <p className="text-center text-[18px]">Services I provide</p>
       </div>
       <section id="services" className="services section">
         <div className="container">

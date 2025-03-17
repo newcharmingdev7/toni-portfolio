@@ -7,7 +7,7 @@ const About = () => {
         <div>
           <p className="text-center">About</p>
         </div>
-        <p className="text-center">
+        <p className="text-center text-[18px]">
           Hey there! I&apos;m Toni, a software developer with a passion for
           building scalable and efficient solutions.
         </p>
@@ -26,7 +26,7 @@ const About = () => {
             <div className="col-lg-8 content d-flex justify-content-center align-items-center">
               <div>
                 <h2>Software Developer</h2>
-                <p className="fst-italic py-3">
+                <p className="py-3 text-[18px]">
                   an experienced and reliable software developer with over a
                   decade of expertise in web, mobile, AI, Web3, and DevOps.
                   Known for delivering high-quality, scalable solutions through
@@ -36,7 +36,7 @@ const About = () => {
                   into reality, I&apos;m your person.
                 </p>
                 <div className="row">
-                  <ul>
+                  <ul className="text-[18px]">
                     <li>
                       <i className="bi bi-chevron-right"></i>{" "}
                       <strong>Name:</strong> <span>Toni Stuckey</span>

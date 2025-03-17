@@ -5,14 +5,14 @@ const Skills = () => {
         <div>
           <p className="text-center">Technical Expertise</p>
         </div>
-        <p className="text-center">
+        <p className="text-center text-[18px]">
           Highly skilled in a range of technologies.
         </p>
       </div>
       <section id="skills" className="about section">
         <div className="container">
           <div className="row gy-4 justify-content-center">
-            <div className="container mx-auto" style={{ maxWidth: "450px" }}>
+            <div className="container mx-auto text-[18px]" style={{ maxWidth: "500px" }}>
               <p>Frontend: React, Next.js, Angular, Remix</p>
               <p>Backend: Express microservices, Python, Node.js</p>
               <p>Database: MySQL, PostgreSQL, MongoDB, Redis, Firebase</p>
