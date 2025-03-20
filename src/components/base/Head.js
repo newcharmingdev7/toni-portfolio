@@ -129,7 +129,8 @@ const HeadComponent = () => {
         />
         <meta property="linkedin:image" content="/assets/img/profile-img.jpg" />
         <meta property="facebook:image" content="/assets/img/profile-img.jpg" />
-        <title>Toni Stuckey </title>
+        <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon" />
+        <title>Toni Stuckey | Software Developer</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
       </Head>
