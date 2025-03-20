@@ -28,17 +28,6 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-ux">
-                <div className="portfolio-content h-100 rounded">
-                  <a href="https://www.findd.ai/" alt="findd" target="_blank">
-                    <img
-                      src="assets/img/portfolio/findd.jpg"
-                      className="img-fluid"
-                      alt="findd"
-                    />
-                  </a>
-                </div>
-              </div>
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-web">
                 <div className="portfolio-content h-100 rounded">
                   <a
@@ -54,17 +43,30 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
+              
+              <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-ux">
+                <div className="portfolio-content h-100 rounded">
+                  <a href="https://www.findd.ai/" alt="findd" target="_blank">
+                    <img
+                      src="assets/img/portfolio/findd.jpg"
+                      className="img-fluid"
+                      alt="findd"
+                    />
+                  </a>
+                </div>
+              </div>
+
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-ux">
                 <div className="portfolio-content h-100 rounded">
                   <a
-                    href="https://www.frienzy.com/"
-                    alt="frienzy"
+                    href="https://www.nywholesalescarves.com/"
+                    alt="nywholesalescarves"
                     target="_blank"
                   >
                     <img
-                      src="assets/img/portfolio/frienzy.jpg"
+                      src="assets/img/portfolio/nywholesalescarves.jpg"
                       className="img-fluid"
-                      alt="frienzy"
+                      alt="nywholesalescarves"
                     />
                   </a>
                 </div>
@@ -72,14 +74,14 @@ const Portfolio = () => {
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-web">
                 <div className="portfolio-content h-100 rounded">
                   <a
-                    href="https://tamaractech.com/"
-                    alt="tamarac"
+                    href="https://www.projectyou.care/"
+                    alt="projectyou"
                     target="_blank"
                   >
                     <img
-                      src="assets/img/portfolio/tamarac.jpg"
+                      src="assets/img/portfolio/projectyou.jpg"
                       className="img-fluid"
-                      alt="tamarac"
+                      alt="projectyou"
                     />
                   </a>
                 </div>
