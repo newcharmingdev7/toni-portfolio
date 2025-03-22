@@ -7,7 +7,7 @@ const Portfolio = () => {
         </div>
         <p className="text-center text-[18px]">Explore my projects</p>
       </div>
-      <section id="portfolio" className="portfolio section">
+      <section id="portfolio" className="portfolio section" data-aos="zoom-in">
         <div className="container">
           <div
             className="isotope-layout"
@@ -43,7 +43,7 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-ux">
                 <div className="portfolio-content h-100 rounded">
                   <a href="https://www.findd.ai/" alt="findd" target="_blank">

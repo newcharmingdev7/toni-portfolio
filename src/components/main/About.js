@@ -12,7 +12,7 @@ const About = () => {
           building scalable and efficient solutions.
         </p>
       </div>
-      <section id="about" className="about section">
+      <section id="about" className="about section" data-aos="zoom-in">
         <div className="container">
           <div className="row gy-4 justify-content-center">
             <div className="flex justify-content-center align-items-center">

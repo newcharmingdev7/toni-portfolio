@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <>
       <div className="container section-title">
@@ -7,7 +15,7 @@ const Service = () => {
         </div>
         <p className="text-center text-[18px]">Services I provide</p>
       </div>
-      <section id="services" className="services section">
+      <section id="services" className="services section" data-aos="fade-up">
         <div className="container">
           <div className="row gy-3">
             <div className="col-lg-4 col-md-6">

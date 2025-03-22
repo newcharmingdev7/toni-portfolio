@@ -63,7 +63,7 @@ const Contact = () => {
               Would love to hear from you
             </p>
           </div>
-          <section id="contact" className="contact section">
+          <section id="contact" className="contact section" data-aos="zoom-in">
             <div className="container">
               <div className="php-email-form form">
                 <form onSubmit={handleSubmit} className="row gy-4">

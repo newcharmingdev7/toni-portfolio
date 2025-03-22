@@ -7,7 +7,7 @@ const Experience = () => {
         </div>
         <p className="text-center text-[18px]">Explore my career journey</p>
       </div>
-      <section id="experience" className="resume section text-[18px]">
+      <section id="experience" className="resume section text-[18px]" data-aos="zoom-in">
         <div className="container">
           <div className="resume-item">
             <h4>Software Developer and Team Lead</h4>

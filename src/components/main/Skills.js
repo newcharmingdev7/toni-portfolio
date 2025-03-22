@@ -9,10 +9,13 @@ const Skills = () => {
           Highly skilled in a range of technologies.
         </p>
       </div>
-      <section id="skills" className="about section">
+      <section id="skills" className="about section" data-aos="zoom-in">
         <div className="container">
           <div className="row gy-4 justify-content-center">
-            <div className="container mx-auto text-[18px]" style={{ maxWidth: "500px" }}>
+            <div
+              className="container mx-auto text-[18px]"
+              style={{ maxWidth: "500px" }}
+            >
               <p>Frontend: React, Next.js, Angular, Remix</p>
               <p>Backend: Express microservices, Python, Node.js</p>
               <p>Database: MySQL, PostgreSQL, MongoDB, Redis, Firebase</p>

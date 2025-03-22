@@ -1,4 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Head from "@/components/base/Head";
 import Header from "@/components/base/Header";
@@ -10,9 +12,14 @@ import Portfolio from "@/components/main/Portfolio";
 import Service from "@/components/main/Service";
 import Contact from "@/components/main/Contact";
 import Footer from "@/components/base/Footer";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <>
       <Head />
