@@ -31,14 +31,14 @@ const Portfolio = () => {
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-web">
                 <div className="portfolio-content h-100 rounded">
                   <a
-                    href="https://adadvance.com/"
-                    alt="adadvance"
+                    href="https://hellosyncx.com/"
+                    alt="Syncx"
                     target="_blank"
                   >
                     <img
-                      src="assets/img/portfolio/adadvance.jpg"
+                      src="assets/img/portfolio/syncx.png"
                       className="img-fluid"
-                      alt="adadvance"
+                      alt="Syncx"
                     />
                   </a>
                 </div>
@@ -59,14 +59,14 @@ const Portfolio = () => {
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-ux">
                 <div className="portfolio-content h-100 rounded">
                   <a
-                    href="https://www.nywholesalescarves.com/"
-                    alt="nywholesalescarves"
+                    href="https://www.consumerdirectva.com/"
+                    alt="consumerdirectva"
                     target="_blank"
                   >
                     <img
-                      src="assets/img/portfolio/nywholesalescarves.jpg"
+                      src="assets/img/portfolio/consumerdirectva.png"
                       className="img-fluid"
-                      alt="nywholesalescarves"
+                      alt="consumerdirectva"
                     />
                   </a>
                 </div>
@@ -74,14 +74,14 @@ const Portfolio = () => {
               <div className="col-lg-4 col-md-12 portfolio-item isotope-item filter-web">
                 <div className="portfolio-content h-100 rounded">
                   <a
-                    href="https://www.projectyou.care/"
-                    alt="projectyou"
+                    href="https://cerkitek-landing.vercel.app/"
+                    alt="cerkitek"
                     target="_blank"
                   >
                     <img
-                      src="assets/img/portfolio/projectyou.jpg"
+                      src="assets/img/portfolio/cerkitek.png"
                       className="img-fluid"
-                      alt="projectyou"
+                      alt="cerkitek"
                     />
                   </a>
                 </div>
