@@ -15,14 +15,6 @@ const About = () => {
       <section id="about" className="about section" data-aos="zoom-in">
         <div className="container">
           <div className="row gy-4 justify-content-center">
-            <div className="flex justify-content-center align-items-center">
-              <Image
-                src="/assets/img/profile-img.jpg"
-                alt="Toni Stuckey"
-                width={300}
-                height={300}
-              />
-            </div>
             <div className="col-lg-8 content d-flex justify-content-center align-items-center">
               <div>
                 <h2>Software Developer</h2>
@@ -57,6 +49,8 @@ const About = () => {
                     </li>
                   </ul>
                 </div>
+              </div>
+              <div>
               </div>
             </div>
           </div>
