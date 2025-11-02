@@ -17,13 +17,7 @@ const Header = () => {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#skills">Technical Expertise</a>
-            </li>
-            <li>
               <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
