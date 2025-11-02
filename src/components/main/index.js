@@ -34,10 +34,10 @@ const Main = () => {
                     <i className="bi bi-github"></i>
                   </a>
                   <a
-                    href="https://pangea.app/toni-stuckey"
+                    href="https://t.me/tonistuckey"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Pangea"
+                    aria-label="Telegram"
                   >
                     <i className="bi bi-telegram"></i>
                   </a>
