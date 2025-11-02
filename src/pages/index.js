@@ -31,7 +31,7 @@ export default function Home() {
           <About />
           <Skills />
           <Experience />
-          <Portfolio />
+          {/* <Portfolio /> */}
           <Service />
           <Contact />
         </main>
